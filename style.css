@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+  }
+  
+  #chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* Use fractions for even distribution */
+    grid-gap: 0; /* No gap between squares */
+    border: 5px solid #333;
+    width: 80vmin; /* Set fixed size */
+    height: 80vmin; /* Set fixed size */
+  }
+  
+  .square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Ensuring squares are perfect squares by basing the height on the width */
+  .square::before {
+    content: '';
+    float: left;
+    padding-top: 100%;
+  }
+  
+  .light {
+    background-color: #f0d9b5;
+  }
+  
+  .dark {
+    background-color: #b58863;
+  }
+  
+  .piece {
+    font-size: 5vmin;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+  
+
+.piece.white { color: #fff; } /* Style for white pieces */
+.piece.black { color: #000; } /* Style for black pieces */
+
+
+
+
